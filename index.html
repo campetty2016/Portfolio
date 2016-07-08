@@ -100,7 +100,7 @@
 						If you would like to contact me please fill out the following form below.
 					</p>
 
-					<form method="post" action="https://docs.google.com/forms/d/1hhX7fLJygmF7W3hkIf6iSOXz7iVhmQwjdCOxsNLztjk/PortfolioResponse">
+					<form method="post" action="https://docs.google.com/forms/d/1hhX7fLJygmF7W3hkIf6iSOXz7iVhmQwjdCOxsNLztjk/PortfolioResponse" target="hidden" onsubmit="submitted=true">
 
 						<fieldset>
 							<legend>Contact Form</legend>
@@ -113,6 +113,8 @@
 						</fieldset>
 
 					</form>
+					
+					<iframe name="hidden" id="hidden" style="display:none;" onload="if(submitted) {}"></iframe>
 
 					<br/>
 
