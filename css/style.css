@@ -267,7 +267,7 @@ h2::first-letter {
     height: 60%;
 }
 #ContactSection {
-    height: auto;
+    height: inherit;
 }
 #ContactSection p {
     word-wrap: break-word;
