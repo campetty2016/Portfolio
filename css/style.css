@@ -193,7 +193,7 @@ h2::first-letter {
     background-position: center;
 }
 #AboutSection {
-    height: 55%;
+    height: 400px;
 }
 #AboutSection p {
     word-wrap: break-word;
@@ -264,7 +264,7 @@ h2::first-letter {
     opacity: 1;
 }
 #WorkSection {
-    height: 60%;
+    height: 600px;
 }
 #ContactSection {
     height: auto;
