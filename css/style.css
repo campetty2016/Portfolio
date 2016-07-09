@@ -166,7 +166,6 @@ h2 {
 }
 h2::first-letter {
     font-size: 6vw;
-    color: purple;
     letter-spacing: 2px;
     word-spacing: 2px;
 }
