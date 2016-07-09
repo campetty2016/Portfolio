@@ -43,7 +43,7 @@ header {
     margin: auto;
 }
 h1 {
-    font-size: 175%;
+    font-size: 225%;
     color: purple;
     text-shadow: 1px 1px 1px white, 1px 1px 1px black, 1px 1px 1px white, 1px 1px 1px purple;
     font-style: italic;
@@ -52,7 +52,7 @@ h1 {
     word-spacing: 2px;
 }
 h1::first-letter, span {
-    font-size: 200%;
+    font-size: 250%;
     color: purple;
     letter-spacing: 1px;
 }
@@ -62,7 +62,7 @@ hr {
 }
 nav {
     width: 100%;
-    height: 25%;
+    height: 35%;
     margin: auto;
     display: flex;
     padding-top: 5px;
@@ -75,8 +75,8 @@ nav {
 }
 a {
     text-decoration: none;
-    font-size: 115%;
-    color: white;
+    font-size: 125%;
+    color: rebbeccapurple;
     text-shadow: 1px 1px 1px white, 1px 1px 1px purple, 2px 2px 2px white, 2px 2px 2px purple;
     letter-spacing: 1px;
     border-bottom: 5px double transparent;
@@ -123,7 +123,7 @@ section:nth-child(even) {
     background-repeat: no-repeat;
     box-sizing: border-box;
     overflow: hidden;
-    color: white;
+    color: darkmagenta;
     display: flex;
     margin: auto;
     align-items: center;
@@ -153,7 +153,7 @@ section:nth-child(even) {
     box-shadow: 1px 2px 3px silver;
 }
 h2 {
-    font-size: 3.5vw;
+    font-size: 5vw;
     margin-bottom: 5px;
     width: 16.5em;
     width: 21ch;
@@ -165,7 +165,7 @@ h2 {
     -moz-animation: typeOut 2s steps(25, end);
 }
 h2::first-letter {
-    font-size: 4vw;
+    font-size: 6vw;
     color: purple;
     letter-spacing: 2px;
     word-spacing: 2px;
