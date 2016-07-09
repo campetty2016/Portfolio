@@ -262,7 +262,7 @@ h2::first-letter {
     z-index: 100;
     opacity: 1;
 }
-.Hide {
+.Hide, .hidden {
     opacity: 0;
 }
 #WorkSection {
