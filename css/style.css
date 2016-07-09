@@ -328,6 +328,7 @@ input, textarea {
 }
 textarea {
     padding-top: 15px;
+    font-size: 1em;
 }
 #submit {
     display: block;
