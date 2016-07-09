@@ -3,6 +3,7 @@ $(document).ready(function () {
 
 	//Calls the Animate Section Function
 	AnimatesSection();
+	WindowOnLoad();
 });
 
 //Animate Section Function that Animates the Page to Scroll Once a Link is Clicked
@@ -22,11 +23,36 @@ function AnimatesSection() {
 
 		}, 2000);
 	});
-
 	$("nav a").click(function (e) {
 		$("nav a").removeClass("Active");
 		$(this).addClass("Active");
 		return false;
 	});
+}
 
+function WindowOnLoad(){
+
+window.onhashchange = function (e) {
+	
+   if(window.location.hash === "Web1"){
+
+     $(".Slide:not(target)").addClass("Hide");
+
+
+   } else if(window.location.hash === "Web2") {
+
+     $(".Slide:not(target)").addClass("Hide");
+
+
+   } else if(window.location.hash === "Web3") {
+
+     $(".Slide:not(target)").addClass("Hide");
+
+
+   } else {
+
+     $(".Slide:not(target)").addClass("Hide");
+
+   }
+}
 }
