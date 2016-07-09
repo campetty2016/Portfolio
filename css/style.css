@@ -230,7 +230,7 @@ h2::first-letter {
 }
 #Slider {
     height: 100%;
-    width: 100%;
+    width: 90%;
     margin: auto;
     z-index: 1;
     border-radius: 1em;
@@ -321,14 +321,13 @@ input, textarea {
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     background-color: lavender;
-    font-size: 1em;
+    font-size: 100%;
     display: flex;
     align-self: center;
     color: purple;
 }
 textarea {
     padding-top: 15px;
-    font-size: 1em;
 }
 #submit {
     display: block;
