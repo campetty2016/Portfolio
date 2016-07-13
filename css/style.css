@@ -82,14 +82,14 @@ a {
     letter-spacing: 1px;
     border-bottom: 5px double transparent;
 }
-a:visited {
+nav a:visited {
     color: black;
 }
-a:hover, a:active {
+nav a:hover, a:active {
     text-shadow: 2px 2px 2px white;
     color: purple;
     border-bottom: 5px double purple;
-    transition: border-bottom2s;
+    transition: border-bottom 2s;
     -webkit-transition: border-bottom 2s;
 }
 .Active {
@@ -99,7 +99,6 @@ a:hover, a:active {
 }
 section {
     padding-top: 120px;
-    padding-left: 2%;
     padding-bottom: 5px;
     width: 100%;
     height: 100%;
@@ -195,6 +194,7 @@ h2::first-letter {
 }
 #AboutSection {
     height: 400px;
+    padding-left: 2%;
 }
 #AboutSection p {
     word-wrap: break-word;
@@ -223,32 +223,37 @@ h2::first-letter {
 #next {
     position: absolute;
     top: 50%;
-    right: 10%;
+    right: 5px;
     z-index: 2;
 }
+.arrows:hover, .arrows a:hover {
+    color: white;
+    text-shadow: 1px 1px 1px white, 2px 2px 2px purple, 1px 1px 1px black;
+    border-radius: 100%;
+    transition: text-shadow 1s, background-color 1s;
+    -webkit-transition: text-shadow 1s, background-color 1s;
+    border-width: 0px;
+    text-decoration: none;
+}
 #SliderContainer {
-    width: 90%;
     height: 100%;
+    width: 80%;
     position: relative;
     background-color: rgba(156, 39, 176, 0.17);
     display: flex;
     flex-direction: row;
     border: 5px double oldlace;
-    border-radius: 1em;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    align-self: center;
     margin: auto;
+    border-radius: 1em;
+    margin-top: 25px;
     padding-left: 0px;
-    margin-top: 50px;
+    justify-content: space-between;
     overflow: hidden;
 }
 #Slider {
     height: 100%;
-    width: 90%;
-    margin: auto;
-    z-index: 1;
+    width: 75%;
+    position: absolute;
     border-radius: 1em;
     margin-top: 25px;
     -webkit-border-radius: 1em;
@@ -257,6 +262,12 @@ h2::first-letter {
 }
 #Slider:first-child {
     opacity: 1;
+}
+#Web2 {
+    margin: 0 50px;
+}
+.Slides {
+    width: 50%;
 }
 .Slide {
     height: 100%;
@@ -267,10 +278,20 @@ h2::first-letter {
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     position: absolute;
+    margin: auto;
+}
+.SlideItem {
+    width: 650px;
+}
+.Slide img {
+    margin: auto;
 }
 .big {
-    width: 50%;
+    width: 80%;
     height: 90%;
+}
+.long {
+    width: 60%;
 }
 .other {
     width: 80%;
@@ -284,8 +305,12 @@ h2::first-letter {
     height: 600px;
     padding-bottom: 50px;
 }
+#WorkSection h2 {
+    padding-left: 2%;
+}
 #ContactSection {
     height: auto;
+    padding-left: 2%;
 }
 #ContactSection p {
     word-wrap: break-word;
