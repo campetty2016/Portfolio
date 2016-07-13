@@ -4,6 +4,8 @@ $(document).ready(function () {
 	//Calls the Animate Section Function
 	AnimatesSection();
 	WindowOnLoad();
+	ChangeSlide();
+
 });
 
 //Animate Section Function that Animates the Page to Scroll Once a Link is Clicked
@@ -30,29 +32,74 @@ function AnimatesSection() {
 	});
 }
 
-function WindowOnLoad(){
+function WindowOnLoad() {
 
-window.onhashchange = function (e) {
-	
-   if(window.location.hash === "Web1"){
+	window.onhashchange = function (e) {
 
-     $(".Slide:not(target)").addClass("Hide");
+		if (window.location.hash === "Web1") {
 
+			$(".Slide(not:target)").addClass("hide");
 
-   } else if(window.location.hash === "Web2") {
+		} else if (window.location.hash === "Web2") {
 
-     $(".Slide:not(target)").addClass("Hide");
+			$(".Slide(not:target)").addClass("hide");
 
+		} else if (window.location.hash === "Web3") {
 
-   } else if(window.location.hash === "Web3") {
+			$(".Slide(not:target)").addClass("hide");
 
-     $(".Slide:not(target)").addClass("Hide");
+		} else if (window.location.hash === "Web4") {
 
+			$(".Slide(not:target)").addClass("hide");
 
-   } else {
-
-     $(".Slide:not(target)").addClass("Hide");
-
-   }
+		}
+	};
 }
+
+var Start = 0;
+var Slides = $(".SlideItem");
+var SlideAmt = Slides.length;
+
+function InitSlider() {
+
+	var Slide = $(".SlideItem").eq(Start);
+	Slides.hide();
+	Slide.css("display", "block");
+
+}
+
+var AutoSlide = setInterval(function () {
+
+	Start += 1;
+
+	if (Start >= SlideAmt - 1) {
+		Start = 0;
+
+	}
+
+	InitSlider();
+
+}, 5000);
+
+function ChangeSlide() {
+
+	$("#prev").click(function () {
+		clearInterval(AutoSlide);
+		Start -= 1;
+
+		if (Start < 0) {
+			Start = SlideAmt - 1;
+		}
+		InitSlider();
+	});
+
+	$("#next").click(function () {
+		clearInterval(AutoSlide);
+		Start += 1;
+		if (Start > SlideAmt - 1) {
+			Start = 0;
+		}
+		InitSlider();
+	});
+
 }
