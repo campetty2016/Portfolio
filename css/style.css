@@ -9,7 +9,27 @@
     font-family: 'Droid Serif', serif;
 }
 body {
-    background-color: lavender;
+    background-color: oldLace;
+}
+.Loader {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: oldLace;
+    color: purple;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    cursor: progress;
+}
+.LoaderContainer {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 .wrapper {
     width: 100%;
@@ -152,7 +172,7 @@ section:nth-child(even) {
     border: 1px double purple;
     box-shadow: 1px 2px 3px silver;
 }
-h2 {
+.containAction h2, section h2 {
     font-size: 5vw;
     margin-bottom: 5px;
     width: 16.5em;
@@ -162,13 +182,17 @@ h2 {
     font-style: italic;
     color: darkmagenta;
     overflow: hidden;
-    -webkit-animation: typeOut 2s steps(25, end);
-    -moz-animation: typeOut 2s steps(25, end);
 }
 h2::first-letter {
     font-size: 6vw;
     letter-spacing: 2px;
     word-spacing: 2px;
+}
+.animate {
+    -webkit-animation: typeOut 2s steps(25, end);
+    -ms-animation: typeOut 2s steps(25, end);
+    -moz-animation: typeOut 2s steps(25, end);
+    -o-animation: typeOut 2s steps(25, end);
 }
 #Avatar {
     height: 25vw;
@@ -213,6 +237,7 @@ h2::first-letter {
 }
 .arrows {
     color: purple;
+    cursor: pointer;
 }
 #prev {
     position: absolute;
@@ -229,6 +254,7 @@ h2::first-letter {
 .arrows:hover, .arrows a:hover {
     color: white;
     text-shadow: 1px 1px 1px white, 2px 2px 2px purple, 1px 1px 1px black;
+    border-radius: 100%;
     transition: text-shadow 1s, background-color 1s;
     -webkit-transition: text-shadow 1s, background-color 1s;
     border-width: 0px;
@@ -251,7 +277,7 @@ h2::first-letter {
 }
 #Slider {
     height: 100%;
-    width: 80%;
+    width: 75%;
     position: absolute;
     border-radius: 1em;
     margin-top: 25px;
@@ -278,6 +304,7 @@ h2::first-letter {
     -moz-border-radius: 1em;
     position: absolute;
     margin: auto;
+    cursor: pointer;
 }
 .SlideItem {
     width: 650px;
@@ -293,7 +320,7 @@ h2::first-letter {
     width: 60%;
 }
 .other {
-    width: 80%;
+    margin-left: -50px;
     height: 90%;
 }
 .SlideItem:target {
@@ -340,13 +367,13 @@ form {
 input {
     width: 100%;
 }
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus, input[type="text"]:hover, textarea:hover {
+input[type="text"]:focus, input[type="email"]:focus, input[type="email"]:active, textarea:focus, input[type="text"]:active, textarea:active, input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     outline: none;
     border: none;
     border: 2px inset purple;
     background-color: lavender;
 }
-input[type="text"]:hover, input[type="email"]:focus, textarea:hover {
+input[type="text"]:hover, input[type="email"]:hover, textarea:hover {
     background-color: oldlace;
 }
 input, textarea {
@@ -398,6 +425,13 @@ textarea {
     color: purple;
     text-shadow: 1px 1px 1px oldlace;
     border: 2px inset purple;
+    transition: text-shadow 1s, background-color 1s, border 1s;
+    -webkit-transition: text-shadow 1s, background-color 1s, border 1s;
+    cursor: pointer;
+}
+input[type="submit"]:focus {
+    outline: none;
+    border: 1px double purple;
 }
 footer {
     background-color: rgba(156, 39, 176, 0.2);
