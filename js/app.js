@@ -1,3 +1,7 @@
+window.onload = (function () {
+	$(".Loader").delay(4000).fadeOut("slow");
+});
+
 //Ready Function that Waits for When the Page is Ready
 $(document).ready(function () {
 
@@ -5,11 +9,14 @@ $(document).ready(function () {
 	AnimatesSection();
 	WindowOnLoad();
 	ChangeSlide();
+	Submit();
 
 });
 
 //Animate Section Function that Animates the Page to Scroll Once a Link is Clicked
 function AnimatesSection() {
+
+	$(".containAction h2").addClass("animate");
 
 	//Assigns a Click Handler to the Links within the Navigation
 	$("nav a").click(function (e) {
@@ -72,7 +79,7 @@ var AutoSlide = setInterval(function () {
 
 	Start += 1;
 
-	if (Start >= SlideAmt - 1) {
+	if (Start > SlideAmt - 1) {
 		Start = 0;
 
 	}
@@ -90,6 +97,7 @@ function ChangeSlide() {
 		if (Start < 0) {
 			Start = SlideAmt - 1;
 		}
+
 		InitSlider();
 	});
 
@@ -99,7 +107,41 @@ function ChangeSlide() {
 		if (Start > SlideAmt - 1) {
 			Start = 0;
 		}
+
 		InitSlider();
 	});
 
+}
+
+function Submit() {
+
+	$("#submit").click(function (e) {
+
+		var submit = false;
+		var Name = $("#name").val();
+		var Email = $("#email").val();
+		var Message = $("#message").val();
+
+		if (Name === "" | Email === "" | Message === "") {
+
+			submit = false;
+			swal({
+				title: 'Error',
+				text: 'Please fill out all the inputs. Thank you.',
+				timer: 5000,
+				showConfirmButton: false
+			});
+			e.preventDefault();
+
+		} else {
+
+			submit = true;
+			swal({
+				title: 'Message Recieved',
+				text: 'Thank you for contacting me',
+				timer: 5000,
+				showConfirmButton: false
+			});
+		}
+	});
 }
