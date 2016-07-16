@@ -33,7 +33,7 @@ body {
 }
 .LoaderContainer span {
     font-size: 250%;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 .wrapper {
     width: 100%;
@@ -395,9 +395,11 @@ input, textarea {
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     background-color: lavender;
-    display: flex;
-    align-self: center;
     color: purple;
+}
+
+textarea{
+    padding-top: 15px;
 }
 
 #submit {
