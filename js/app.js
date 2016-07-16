@@ -13,6 +13,13 @@ $(document).ready(function () {
 
 });
 
+function EmailValid( email ) {
+	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	//Returns the Result of the Test
+	return re.test( email );
+}
+
 //Animate Section Function that Animates the Page to Scroll Once a Link is Clicked
 function AnimatesSection() {
 
@@ -132,6 +139,18 @@ function Submit() {
 				showConfirmButton: false
 			});
 			e.preventDefault();
+			
+		else if (EmailValid(Email) === false) {
+			
+			e.preventDefault();
+
+			submit = false;
+			swal({
+				title: 'Error',
+				text: 'Please enter a valid email. Thank you.',
+				timer: 5000,
+				showConfirmButton: false
+			});
 
 		} else {
 
