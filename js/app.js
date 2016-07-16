@@ -140,7 +140,7 @@ function Submit() {
 			});
 			e.preventDefault();
 			
-		else if (EmailValid(Email) === false) {
+		} else if (EmailValid(Email) === false) {
 			
 			e.preventDefault();
 
