@@ -387,10 +387,8 @@ input, textarea {
     border: 2px inset oldlace;
     margin-top: 20px;
     margin-left: 15px;
-    padding-left: 5px;
-    text-indent: 15px;
-    height: 50px;
-    font-size: 1em;
+    padding-left: 15px;
+    font-size: 200%;
     border-radius: 1em;
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
@@ -398,8 +396,13 @@ input, textarea {
     color: purple;
 }
 
+input{
+    height: 50px;
+}
+
 textarea{
     padding-top: 15px;
+    min-height: 200px;
 }
 
 #submit {
