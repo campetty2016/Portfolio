@@ -388,7 +388,7 @@ input, textarea {
     margin-top: 20px;
     margin-left: 15px;
     padding-left: 15px;
-    font-size: 200%;
+    font-size: 100%;
     border-radius: 1em;
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
@@ -403,6 +403,7 @@ input{
 textarea{
     padding-top: 15px;
     min-height: 200px;
+    overflow: hidden;
 }
 
 #submit {
