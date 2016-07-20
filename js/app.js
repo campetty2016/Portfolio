@@ -22,9 +22,7 @@ function EmailValid( email ) {
 
 //Animate Section Function that Animates the Page to Scroll Once a Link is Clicked
 function AnimatesSection() {
-
-	$(".containAction h2").addClass("animate");
-
+	
 	//Assigns a Click Handler to the Links within the Navigation
 	$("nav a").click(function (e) {
 
