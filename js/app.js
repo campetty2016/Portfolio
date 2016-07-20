@@ -39,7 +39,8 @@ function AnimatesSection() {
 		
 		// $("nav a").removeClass("Active");
 		// $(this).addClass("Active");
-	});
+		console.log(SectionID);
+	})
 
 }
 
