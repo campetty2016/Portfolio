@@ -36,32 +36,35 @@ function AnimatesSection() {
 			scrollTop: $("#" + SectionID).offset().top
 
 		}, 2000);
+		
+		$("nav a").removeClass("Active");
+		$(this).addClass("Active");
 	})
 }
 
 function WindowOnLoad() {
 
-	window.onhashchange = function (e) {
+	// window.onhashchange = function (e) {
 
-		if (window.location.hash === "Web1") {
+	// 	if (window.location.hash === "Web1") {
 
-			$(".Slide(not:target)").addClass("hide");
+	// 		$(".Slide(not:target)").addClass("hide");
 
-		} else if (window.location.hash === "Web2") {
+	// 	} else if (window.location.hash === "Web2") {
 
-			$(".Slide(not:target)").addClass("hide");
+	// 		$(".Slide(not:target)").addClass("hide");
 
-		} else if (window.location.hash === "Web3") {
+	// 	} else if (window.location.hash === "Web3") {
 
-			$(".Slide(not:target)").addClass("hide");
+	// 		$(".Slide(not:target)").addClass("hide");
 
-		} else if (window.location.hash === "Web4") {
+	// 	} else if (window.location.hash === "Web4") {
 
-			$(".Slide(not:target)").addClass("hide");
+	// 		$(".Slide(not:target)").addClass("hide");
 
-		}
-	};
-}
+	// 	}
+	// };
+} mk
 
 var Start = 0;
 var Slides = $(".SlideItem");
