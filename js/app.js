@@ -24,7 +24,7 @@ function EmailValid( email ) {
 function AnimatesSection() {
 	
 	//Assigns a Click Handler to the Links within the Navigation
-	$("nav a").click(function (e) {
+	$("nav a").click(function(e) {
 
 		//Declares the Variable ViewID By Assigning the ID of the Link Clicked and Appending the Word View at the End
 		var SectionID = this.id + "Section";
@@ -36,11 +36,7 @@ function AnimatesSection() {
 			scrollTop: $("#" + SectionID).offset().top
 
 		}, 2000);
-		
-		$("nav a").removeClass("Active");
-		$(this).addClass("Active");
 	})
-
 }
 
 function WindowOnLoad() {
