@@ -36,10 +36,12 @@ function AnimatesSection() {
 			scrollTop: $("#" + SectionID).offset().top
 
 		}, 2000);
-		
+	});
+	
+	$("nav a").click(function(e) {
 		$("nav a").removeClass("Active");
 		$(this).addClass("Active");
-	})
+	});
 }
 
 function WindowOnLoad() {
@@ -64,7 +66,7 @@ function WindowOnLoad() {
 
 	// 	}
 	// };
-} mk
+} 
 
 var Start = 0;
 var Slides = $(".SlideItem");
