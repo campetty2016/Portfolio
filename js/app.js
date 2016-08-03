@@ -44,30 +44,6 @@ function AnimatesSection() {
 	});
 }
 
-function WindowOnLoad() {
-
-	// window.onhashchange = function (e) {
-
-	// 	if (window.location.hash === "Web1") {
-
-	// 		$(".Slide(not:target)").addClass("hide");
-
-	// 	} else if (window.location.hash === "Web2") {
-
-	// 		$(".Slide(not:target)").addClass("hide");
-
-	// 	} else if (window.location.hash === "Web3") {
-
-	// 		$(".Slide(not:target)").addClass("hide");
-
-	// 	} else if (window.location.hash === "Web4") {
-
-	// 		$(".Slide(not:target)").addClass("hide");
-
-	// 	}
-	// };
-} 
-
 var Start = 0;
 var Slides = $(".SlideItem");
 var SlideAmt = Slides.length;
