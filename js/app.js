@@ -7,7 +7,6 @@ $(document).ready(function () {
 
 	//Calls the Animate Section Function
 	AnimatesSection();
-	WindowOnLoad();
 	ChangeSlide();
 	Submit();
 
