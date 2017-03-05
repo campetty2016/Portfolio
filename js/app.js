@@ -12,6 +12,7 @@ var Slides = $(".SlideItem");
 var FirstSlide = Slides.first();
 
 window.onload = (function () {
+
 	$(".Loader").delay(4000).fadeOut("slow");
 	$("#HomeSection").delay(4000).fadeIn(3000);
 	FirstSlide.siblings().hide();
@@ -37,15 +38,36 @@ function AnimatesSection() {
 		$(this).addClass("Active");
 
 		//Declares the Variable ViewID By Assigning the ID of the Link Clicked and Appending the Word View at the End
-		var SectionID = "#" + this.id + "Section";
+		var SectionID = this.hash + "Section";
+		var HeaderHeight = $("header").height();
 
 		//Animates All of HTML and Body to Animate and Scroll to the Corresponding Link IDs Clicked
 		$("html, body").animate({
 
 			//Allows the Page to Automatically Scroll to a LinkID Once Clicked Through Appending a # to the ViewID
-			scrollTop: $(SectionID).offset().top
+			scrollTop: $(this.hash + "Section").offset().top
 
 		}, 1000);
+
+		if ($(window).scrollTop() > 60 && $(window).width() < 600) {
+			$("header").css("transform", "translateY(-50px)");
+			//alert($(window).height());
+		} else {
+			$("header").css("transform", "translateY(0px)");
+		}
+	});
+
+	$(window).scroll(function (e) {
+
+		var Scroll = $(this).scrollTop();
+
+		if (Scroll > 60 && $(window).width() < 600) {
+			$("header").css("transform", "translateY(-50px)");
+			//alert($(window).height() < 600);
+
+		} else {
+			$("header").css("transform", "translateY(0px)");
+		}
 	});
 }
 
