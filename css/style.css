@@ -382,7 +382,7 @@ header nav .Active {
 }
 
 .wrapper #WorkSection {
-    /* height: 600px; */
+    height: 600px;
     /* padding-bottom: 80px; */
     padding-left: 2%;
 }
@@ -527,7 +527,7 @@ header nav .Active {
         top: 50%;
     }
     .wrapper #AboutSection p {
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 }
 
