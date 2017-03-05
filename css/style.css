@@ -382,8 +382,6 @@ header nav .Active {
 }
 
 .wrapper #WorkSection {
-    /* height: 600px; */
-    /* padding-bottom: 80px; */
     padding-left: 2%;
 }
 
@@ -534,7 +532,7 @@ header nav .Active {
 @media screen and (max-width: 800px) and (orientation: landscape) {
     .wrapper section {
         padding-bottom: 5px;
-        padding-top: 70px;
+        padding-top: 60px;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
@@ -549,6 +547,9 @@ header nav .Active {
     }
     .wrapper #AboutSection p {
         font-size: 2vw;
+    }
+    header h1 {
+        font-size: 125%;
     }
 }
 
