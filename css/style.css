@@ -527,7 +527,10 @@ header nav .Active {
         margin-bottom: 25px;
     }
     .wrapper #AboutSection {
-        height: 700px;
+        height: 250px;
+    }
+    .wrapper #WorkSection {
+        height: 550px;
     }
     .wrapper #ContactSection {
         padding-bottom: 20px;
