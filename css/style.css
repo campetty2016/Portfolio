@@ -524,8 +524,11 @@ header nav .Active {
         position: absolute;
         top: 50%;
     }
+    .wrapper #AboutSection {
+        height: 450px;
+    }
     .wrapper #AboutSection p {
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 }
 
@@ -544,6 +547,9 @@ header nav .Active {
     .wrapper .containAction {
         position: absolute;
         top: 50%;
+    }
+    .wrapper #AboutSection {
+        height: 550px;
     }
     .wrapper #AboutSection p {
         font-size: 2vw;
