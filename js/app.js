@@ -49,7 +49,7 @@ function AnimatesSection() {
 
 		}, 1000);
 
-		if ($(window).scrollTop() > 60 && $(window).width() < 600) {
+		if ($(window).scrollTop() > 60 && $(window).width() < 800) {
 			$("header").css("transform", "translateY(-58px)");
 			//alert($(window).height());
 		} else {
@@ -61,7 +61,7 @@ function AnimatesSection() {
 
 		var Scroll = $(this).scrollTop();
 
-		if (Scroll > 60 && $(window).width() < 600) {
+		if (Scroll > 60 && $(window).width() < 800) {
 			$("header").css("transform", "translateY(-58px)");
 			//alert($(window).height() < 600);
 
