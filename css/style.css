@@ -551,6 +551,9 @@ header nav .Active {
     header h1 {
         font-size: 125%;
     }
+    .wrapper #WorkSection {
+        height: 800px;
+    }
 }
 
 footer {
