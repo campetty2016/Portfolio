@@ -137,7 +137,7 @@ header nav .Active {
     border-bottom: 3px double purple;
 }
 
-@media screen and (max-width: 800px) and (orientation: portrait) {
+@media screen and (max-width: 900px) and (orientation: portrait) {
     header nav {
         height: 50px;
         display: flex;
@@ -508,7 +508,7 @@ header nav .Active {
     border: 1px double purple;
 }
 
-@media screen and (max-width: 600px) and (orientation: portrait) {
+@media screen and (max-width: 900px) and (orientation: portrait) {
     .wrapper section {
         padding-bottom: 5px;
         padding-top: 70px;
@@ -528,16 +528,17 @@ header nav .Active {
         font-size: 2.5vw;
     }
     .wrapper #AboutSection {
-        height: auto;
+        height: 400px;
     }
     .wrapper #ContactSection {
         padding-bottom: 20px;
     }
 }
 
-@media screen and (max-width: 800px) and (orientation: landscape) {
+@media screen and (max-width: 900px) and (orientation: landscape) {
     .wrapper section {
         padding-bottom: 5px;
+        padding-top: 60px;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
