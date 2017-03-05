@@ -292,7 +292,6 @@ header nav .Active {
 }
 
 .wrapper #SliderContainer #Slider {
-    height: 100%;
     /* width: 60%; */
     display: flex;
     /* width: auto; */
@@ -305,6 +304,7 @@ header nav .Active {
     -webkit-border-radius: 1em;
     -moz-border-radius: 1em;
     background-size: contain;
+    overflow:hidden;
 }
 
 .wrapper #SliderContainer #Slider:first-child {
@@ -524,9 +524,6 @@ header nav .Active {
         position: absolute;
         top: 50%;
     }
-    .wrapper #AboutSection {
-        height: 450px;
-    }
     .wrapper #AboutSection p {
         font-size: 2.5vw;
     }
@@ -547,9 +544,6 @@ header nav .Active {
     .wrapper .containAction {
         position: absolute;
         top: 50%;
-    }
-    .wrapper #AboutSection {
-        height: 550px;
     }
     .wrapper #AboutSection p {
         font-size: 2vw;
