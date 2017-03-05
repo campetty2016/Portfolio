@@ -282,7 +282,6 @@ header nav .Active {
     position: relative;
     display: flex;
     flex-direction: row;
-    border: 5px double oldlace;
     margin: auto;
     border-radius: 1em;
     margin-top: 25px;
@@ -524,7 +523,7 @@ header nav .Active {
         top: 50%;
     }
     .wrapper #AboutSection p {
-        font-size: 2.5vw;
+        font-size: 2vw;
     }
     .wrapper #AboutSection {
         height: 600px;
