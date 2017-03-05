@@ -50,7 +50,7 @@ function AnimatesSection() {
 		}, 1000);
 
 		if ($(window).scrollTop() > 60 && $(window).width() < 600) {
-			$("header").css("transform", "translateY(-50px)");
+			$("header").css("transform", "translateY(-58px)");
 			//alert($(window).height());
 		} else {
 			$("header").css("transform", "translateY(0px)");
@@ -62,7 +62,7 @@ function AnimatesSection() {
 		var Scroll = $(this).scrollTop();
 
 		if (Scroll > 60 && $(window).width() < 600) {
-			$("header").css("transform", "translateY(-50px)");
+			$("header").css("transform", "translateY(-58px)");
 			//alert($(window).height() < 600);
 
 		} else {
