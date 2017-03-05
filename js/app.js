@@ -1,7 +1,3 @@
-window.onload = (function () {
-	$(".Loader").delay(4000).fadeOut("slow");
-});
-
 //Ready Function that Waits for When the Page is Ready
 $(document).ready(function () {
 
@@ -12,47 +8,55 @@ $(document).ready(function () {
 
 });
 
-function EmailValid( email ) {
+var Slides = $(".SlideItem");
+var FirstSlide = Slides.first();
+
+window.onload = (function () {
+	$(".Loader").delay(4000).fadeOut("slow");
+	$("#HomeSection").delay(4000).fadeIn(3000);
+	FirstSlide.siblings().hide();
+	FirstSlide.fadeIn(1000);
+});
+
+function EmailValid(email) {
 	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	//Returns the Result of the Test
-	return re.test( email );
+	return re.test(email);
 }
 
 //Animate Section Function that Animates the Page to Scroll Once a Link is Clicked
 function AnimatesSection() {
-	
+
 	//Assigns a Click Handler to the Links within the Navigation
-	$("nav a").click(function(e) {
+	$("nav a").click(function (e) {
+
+		e.preventDefault();
+
+		$("nav a").removeClass("Active");
+		$(this).addClass("Active");
 
 		//Declares the Variable ViewID By Assigning the ID of the Link Clicked and Appending the Word View at the End
-		var SectionID = this.id + "Section";
+		var SectionID = "#" + this.id + "Section";
 
 		//Animates All of HTML and Body to Animate and Scroll to the Corresponding Link IDs Clicked
 		$("html, body").animate({
 
 			//Allows the Page to Automatically Scroll to a LinkID Once Clicked Through Appending a # to the ViewID
-			scrollTop: $("#" + SectionID).offset().top
+			scrollTop: $(SectionID).offset().top
 
-		}, 2000);
-	});
-	
-	$("nav a").click(function(e) {
-		$("nav a").removeClass("Active");
-		$(this).addClass("Active");
+		}, 1000);
 	});
 }
 
 var Start = 0;
-var Slides = $(".SlideItem");
 var SlideAmt = Slides.length;
 
 function InitSlider() {
 
 	var Slide = $(".SlideItem").eq(Start);
 	Slides.hide();
-	Slide.css("display", "block");
-
+	Slide.fadeIn(1000);
 }
 
 var AutoSlide = setInterval(function () {
@@ -61,7 +65,6 @@ var AutoSlide = setInterval(function () {
 
 	if (Start > SlideAmt - 1) {
 		Start = 0;
-
 	}
 
 	InitSlider();
@@ -112,9 +115,9 @@ function Submit() {
 				showConfirmButton: false
 			});
 			e.preventDefault();
-			
+
 		} else if (EmailValid(Email) === false) {
-			
+
 			e.preventDefault();
 
 			submit = false;
