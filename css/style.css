@@ -382,8 +382,7 @@ header nav .Active {
 }
 
 .wrapper #WorkSection {
-    height: 600px;
-    /* padding-bottom: 80px; */
+    height: 100%;
     padding-left: 2%;
 }
 
