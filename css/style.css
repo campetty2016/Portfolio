@@ -277,7 +277,7 @@ header nav .Active {
 }
 
 .wrapper #SliderContainer {
-    /* height: 110%; */
+    height: 110%;
     width: 90%;
     position: relative;
     display: flex;
