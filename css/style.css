@@ -532,8 +532,6 @@ header nav .Active {
     }
     .wrapper #WorkSection {
         padding-bottom: 20px;
-        height: intial;
-        max-height: 650px;
     }
     .wrapper #ContactSection {
         padding-bottom: 20px;
@@ -565,11 +563,7 @@ header nav .Active {
     header h1 {
         font-size: 125%;
     }
-    .wrapper #WorkSection {
-        height: 800px;
-        max-height: 800px;
-        /* box-sizing: border-box; */
-    }
+
     .wrapper #AboutSection {
         max-height: 600px;
         height: 500px;
