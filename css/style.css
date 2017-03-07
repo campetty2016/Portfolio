@@ -532,6 +532,11 @@ header nav .Active {
         height: intial;
         max-height: 650px;
     }
+    .wrapper #WorkSection {
+        padding-bottom: 20px;
+        height: intial;
+        max-height: 650px;
+    }
     .wrapper #ContactSection {
         padding-bottom: 20px;
     }
@@ -564,6 +569,7 @@ header nav .Active {
     }
     .wrapper #WorkSection {
         height: 800px;
+        max-height: 800px;
         /* box-sizing: border-box; */
     }
     .wrapper #AboutSection {
