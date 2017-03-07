@@ -13,7 +13,8 @@ var FirstSlide = Slides.first();
 
 window.onload = (function () {
 
-	$(".Loader").delay(4000).fadeOut("slow");
+	$("body").css("overflow", "auto");
+	$(".Loader").delay(2000).fadeOut("slow");
 	$("#HomeSection").delay(4000).fadeIn(3000);
 	FirstSlide.siblings().hide();
 	FirstSlide.fadeIn(1000);
@@ -49,8 +50,8 @@ function AnimatesSection() {
 
 		}, 1000);
 
-		if ($(window).scrollTop() > 60 && $(window).width() < 800) {
-			$("header").css("transform", "translateY(-58px)");
+		if ($(window).scrollTop() > 60 && $(window).width() < 900) {
+			$("header").css("transform", "translateY(-50px)");
 			//alert($(window).height());
 		} else {
 			$("header").css("transform", "translateY(0px)");
@@ -61,8 +62,8 @@ function AnimatesSection() {
 
 		var Scroll = $(this).scrollTop();
 
-		if (Scroll > 60 && $(window).width() < 800) {
-			$("header").css("transform", "translateY(-58px)");
+		if (Scroll > 60 && $(window).width() < 900) {
+			$("header").css("transform", "translateY(-50px)");
 			//alert($(window).height() < 600);
 
 		} else {
