@@ -285,9 +285,7 @@ header nav .Active {
     position: relative;
     display: flex;
     flex-direction: row;
-    border: 5px double oldlace;
     margin: auto;
-    border-radius: 1em;
     margin-top: 25px;
     padding-left: 0;
     /* align-items: center; */
