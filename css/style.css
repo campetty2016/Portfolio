@@ -1120,10 +1120,12 @@ header nav .Active {
         font-size: 2.5vw;
     }
     .wrapper #AboutSection {
-        /* height: 600px; */
-        /* max-height: 650px; */
+         height: auto;
+         max-height: 650px;
     }
     .wrapper #ContactSection {
+        height: 800px;
+        max-height: 850px;
         padding-bottom: 20px;
     }
 }
