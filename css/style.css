@@ -384,11 +384,15 @@ header nav .Active {
 
 .wrapper #WorkSection {
     padding-left: 2%;
+    height: 850px;
+    padding-bottom: 45%;
+    box-sizing: border-box;
 }
 
 .wrapper #ContactSection {
     height: auto;
     padding-left: 2%;
+    /* box-sizing: border-box; */
 }
 
 .wrapper #ContactSection p {
@@ -532,9 +536,13 @@ header nav .Active {
     }
     .wrapper #WorkSection {
         padding-bottom: 20px;
+        /* height: auto; */
+        max-height: 950px;
+        height: auto;
+        /* max-height: 400px; */
     }
     .wrapper #ContactSection {
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
     }
 }
 
@@ -563,7 +571,6 @@ header nav .Active {
     header h1 {
         font-size: 125%;
     }
-
     .wrapper #AboutSection {
         max-height: 600px;
         height: 500px;
@@ -749,8 +756,8 @@ header nav .Active {
 .wrapper section {
     padding-top: 120px;
     /* padding-bottom: 5px; */
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    /* height: auto; */
 }
 
 .wrapper section:nth-child(even) {
@@ -829,6 +836,7 @@ header nav .Active {
     /* height: 350px; */
     padding-left: 2%;
     /* padding-bottom: 120px; */
+    /* box-sizing: border-box; */
 }
 
 .wrapper #AboutSection #Avatar {
@@ -874,12 +882,19 @@ header nav .Active {
 }
 
 .wrapper #SliderContainer {
-    /* height: 110%; */
+    height: 30%;
+    max-height: 80%;
     width: 90%;
+    /* background-color: aqua; */
     position: relative;
+    /* padding-bottom: 40%; */
+    /* padding-top: 50px; */
     display: flex;
+    padding-top: 25px;
+    /* padding-bottom: 25px; */
     flex-direction: row;
-    border: 5px double oldlace;
+    /* background-color: #eacbdb; */
+    /* border: 5px double oldlace; */
     margin: auto;
     border-radius: 1em;
     margin-top: 25px;
@@ -893,6 +908,8 @@ header nav .Active {
     /* width: 60%; */
     display: flex;
     /* width: auto; */
+    /* padding-top: 25px; */
+    /* padding-bottom: 25px; */
     margin: auto;
     /* align-items: center; */
     /* justify-content: center; */
@@ -968,7 +985,7 @@ header nav .Active {
     cursor: pointer;
 }
 
-.wrapper #SliderContainer .arrows:hover, a .wrapper #SliderContainer .arrows:hover {
+.wrapper #SliderContainer .arrows:hover, a .wrapper #SliderContainer .arrows:hover, .arrows:active {
     color: white;
     text-shadow: 1px 1px 1px white, 2px 2px 2px purple, 1px 1px 1px black;
     border-radius: 100%;
@@ -985,6 +1002,7 @@ header nav .Active {
 .wrapper #ContactSection {
     height: auto;
     padding-left: 2%;
+    /* box-sizing: content-box; */
 }
 
 .wrapper #ContactSection p::first-letter {
@@ -1097,7 +1115,7 @@ header nav .Active {
 
 @media screen and (max-width: 900px) and (orientation: portrait) {
     .wrapper section {
-        padding-bottom: 5px;
+        /* padding-bottom: 5px; */
         padding-top: 70px;
         width: 100%;
         height: auto;
@@ -1114,11 +1132,13 @@ header nav .Active {
         font-size: 2.5vw;
     }
     .wrapper #AboutSection {
-        /* height: 600px; */
-        /* max-height: 650px; */
+        height: auto;
+        max-height: 650px;
+        /* box-sizing: content-box; */
+        /* padding-bottom: 120px; */
     }
     .wrapper #ContactSection {
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
     }
 }
 
@@ -1127,7 +1147,7 @@ header nav .Active {
         padding-bottom: 5px;
         padding-top: 60px;
         width: 100%;
-        height: auto;
+        /* height: auto; */
         /* box-sizing: border-box; */
     }
     .wrapper section:nth-child(even) {
@@ -1146,11 +1166,13 @@ header nav .Active {
     }
     .wrapper #WorkSection {
         height: 800px;
-        /* box-sizing: border-box; */
+        box-sizing: border-box;
     }
     .wrapper #AboutSection {
         max-height: 600px;
         height: 500px;
+        padding-bottom: 50px;
+        box-sizing: border-box;
     }
     .wrapper #ContactSection {
         padding-bottom: 20px;
