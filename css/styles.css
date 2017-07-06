@@ -760,15 +760,15 @@ section {
         .WorkSection .tiles-container .tile-container .tile #t1 {
           background-position: initial; }
         .WorkSection .tiles-container .tile-container .tile #t2 {
-          background-image: url("../img/MonumentalTours.jpg");
+          background-image: url("../img/MonumentalTours.JPG");
           background-size: cover;
           background-position: center; }
         .WorkSection .tiles-container .tile-container .tile #t3 {
-          background-image: url("../img/MovieMagic.jpg");
+          background-image: url("../img/MovieMagic.JPG");
           background-size: cover;
           background-position: center; }
         .WorkSection .tiles-container .tile-container .tile #t4 {
-          background-image: url("../img/FamilyForm.jpg");
+          background-image: url("../img/FamilyForm.JPG");
           background-size: cover;
           background-position: center; }
       .WorkSection .tiles-container .tile-container:last-child {
