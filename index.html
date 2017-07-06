@@ -1,171 +1,200 @@
-<html>
+<!DOCTYPE html>
 
-	<head>
-		
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!--
+Author: Candace Petty
+Date: 7/5/17
+File: index.html
+-->
 
-		<title>CP Resume</title>
-		<link rel="icon" type="image/jpg" href="img/Lily.jpg">
-		<link rel="stylesheet" href="css/style.css" />
-		<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-		<link href='css/sweetalert.css' rel='stylesheet' type='text/css'>
+<html lang="en">
 
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Designs</title>
+    <link rel="icon" type="image/jpg" href="img/Peacock.jpg">	  
 
-	</head>
+    <!-- Link to Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="vendor/sweetalert/sweetalert.css" rel="stylesheet">
+    <link rel="stylesheet" href="scss/styles.css"/>
 
-	<body>
+  </head>
 
-		<div id="Load" class="Loader">
-			<div class="LoaderContainer">
-				<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-				<span>Loading...</span>
-			</div>
-		</div>
+  <body>
 
+    <div class="wrapper">
 
-		<div class="wrapper">
+      <header>
 
-			<div class="Edge">
+        <div class="header-content">
 
-				<header>
+          <a href="#Home">
 
-					<h1>Candace <span>P</span>etty <span>D</span>esigns</h1>
-					<hr />
+            <!-- Logo -->
+            <h1>
+              C<span>a</span>n<span>d</span>a<span>c</span>e
 
-					<nav>
+              <span>P</span>e<span>t</span>t<span>y</span>
 
-						<a id="Home" href="#Home"><i class="fa fa-home icons" aria-hidden="true"></i> Home</a>
-						<a id="About" href="#About"><i class="fa fa-info-circle icons" aria-hidden="true"></i> About</a>
-						<a id="Work" href="#Work"><i class="fa fa-file-text icons" aria-hidden="true"></i> My Work</a>
-						<a id="Contact" href="#Contact"> <i class="fa fa-envelope icons" aria-hidden="true"></i> Contact</a>
+              D<span>e</span>s<span>i</span>g<span>n</span>s
+           </h1>
 
-					</nav>
+         </a>
 
-				</header>
+          <nav>
+            <a href="#Home"><i class="fa fa-home"></i> Home </a>
+            <a href="#About"><i class="fa fa-info-circle"></i> About </a>
+            <a href="#Work"><i class="fa fa-file-text"></i> Work </a>
+            <a href="#Contact"><i class="fa fa-phone"></i> Contact</a>
+          </nav>
 
-				<div class="Modal"></div>
+        </div>
 
-				<section id="HomeSection">
+      </header>
 
-					<div class="containAction">
+      <!-- Home Section -->
+      <section id="Home" class="HomeSection">
 
-						<h2>Hello,</h2>
-						<h2>My Name is</h2>
-						<h2>Candace Petty</h2>
+        <h2>Hello, my name is Candace Petty.</h2>
 
-					</div>
+      </section>
 
-				</section>
+      <!-- About Section -->
+      <section id="About" class="AboutSection">
 
-				<section id="AboutSection">
+        <h2>About</h2>
 
-					<h2>About</h2>
-					<hr />
+        <div class="AboutContainer">
 
-					<div id="Avatar">
+            <div class="about-content">
 
-						<img src="img/Me.jpg" />
+              <div class="avatar"></div>
 
-					</div>
+              <div class="pie-container">
+                <h3>Top Skills</h3>
+                <div class="pie-chart"></div>
+              </div>
 
-					<p>
-						Presently, I am in my senior year at IUPUI, and I am currently looking for an internship for the fall semester of 2016. Aspiring to be a professional web designer, I utilize photos from my photography as stock photos for majority of my website designs.
-						I enjoy taking pictures and being creative with my websites and art in general. I will be graduating in the spring semester of 2016 with a <b>Bachelor of Science in Informatics</b> and <b>an area of specialization in web design and development</b>						from the IU School of Informatics at IUPUI as well as a <b>certification in E-Commerce Development and Human-Computer Interaction</b>. My three passions in life are technology, art, and science I enjoy all three equaly. I am also a profound writer
-						and combined with my photography I can build the ultimate web site design to fit the uniqueness of your company.
-					</p>
+             </div>
 
-				</section>
+              <div class="bio">
 
-				<section id="WorkSection">
-					<h2>My Work</h2>
-					<hr />
+                <p>
+                    I graduated from the IU School of Informatics and Computing at IUPUI with a Bachelor of Science in Informatics specializing in web design and development along with a certfication in Human-Computer Interaction and E-Commerce Web Development. I am currently looking for a full time web development position. Aspiring to be a professional web designer, I utilize photos from my photography as stock photos for majority of my website designs.
+                    I enjoy taking pictures and being creative with my websites and art in general. My three passions in life are technology, art, and science I enjoy all three equaly. I am also a profound writer
+                    and combined with my photography as well as my HCI background I can build the ultimate web site design to fit the uniqueness of your company.
+                </p>
 
-					<div id="SliderContainer">
+                <p class="thought">
+                    "I believe great design creates a better user experience."
+                </p>
 
-						<a id="prev"><i class="fa fa-3x fa-arrow-circle-o-left arrows" aria-hidden="true"></i></a>
+            </div>
 
-						<div id="Slider" class="center">
+        </div>
 
-							<div class="Slides center">
+      </section>
 
-								<div class="SlideItem">
+      <!-- Work Section -->
+      <section id="Work" class="WorkSection">
 
-									<a href="https://campetty2016.github.io/FridgeApp/index.html" target="_blank"><img id="Web1" class="Slide big" src="img/HUNGRY.JPG" /></a>
+        <h2>Work</h2>
 
-								</div>
+        <div class="tiles-container">
 
-								<div class="SlideItem">
+          <!-- Tile #1  -->
+          <div class="tile-container">
+            <h3>Smart Fridge App</h3>
+            <a target="_blank" href="https://campetty2016.github.io/FridgeApp/index.html">
+              <div id="t1" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              Designed to be used with a smart fridge this app created with JQuery and the Chartist Library shows the user what food is inside their fridge.
+            </div>
+          </div>
 
-									<a href="https://campetty2016.github.io/ErrorCheckForm/index.html" target="_blank"><img id="Web2" class="Slide big long" src="img/FamilyForm.JPG" /></a>
+          <!-- Tile #2  -->
+          <div class="tile-container">
+            <h3>Monumental Tours</h3>
+            <a target="_blank" href="https://campetty2016.github.io/MonumentalTours/index.html">
+              <div id="t2" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              Created as a one page website, Monumental Tours, uses JQuery and CSS to create the ultimate travel agent.
+            </div>
+          </div>
 
-								</div>
+          <!-- Tile #3  -->
+          <div class="tile-container">
+            <h3>Movie Magic</h3>
+            <a target="_blank" href="https://campetty2016.github.io/MovieMagic/index.html">
+              <div id="t3" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              Designed as a one page movie rental website, Movie Magic, uses JQuery and CSS to display their inventory to users
+            </div>
+          </div>
 
-								<div class="SlideItem">
+           <!-- Tile #4  -->
+          <div class="tile-container">
+            <h3>Family Form</h3>
+            <a  target="_blank" href="https://campetty2016.github.io/ErrorCheckForm/index.html">
+              <div id="t4" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              A sample form that uses validation to assure input is valid and actually adds data inputted to a MongoDB JSON database.
+            </div>
+          </div>
 
-									<a href="https://campetty2016.github.io/MonumentalTours/index.html" target="_blank"><img id="Web3" class="Slide other" src="img/MonumentalTours.JPG" /></a>
+        </div>
 
-								</div>
+      </section>
 
-								<div class="SlideItem">
+      <!-- Contact Section -->
+      <section id="Contact" class="ContactSection">
 
-									<a href="https://campetty2016.github.io/MovieMagic/index.html" target="_blank"><img id="Web4" class="Slide other" src="img/MovieMagic.JPG" /></a>
+        <h2>Contact</h2>
 
-								</div>
+        <p>Please fill out the following form below to contact me.</p>
 
-							</div>
+        <form method="post" action="https://script.google.com/macros/s/AKfycbzBqhngdRP_PUemrqYUK6ufJ8owKaP7nZhOUkp7OmbrBJ67R6ns/exec" target="hidden" onsubmit="if(true){}">
 
-						</div>
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <input type="email" id="email" name="email" placeholder="Email" />
+          <textarea id="message" name="message" placeholder="Message"></textarea>
+          <input id="submit" value="Submit" type="submit" />
 
-						<a id="next"><i class=" fa fa-3x fa-arrow-circle-o-right arrows" aria-hidden="true"></i></a>
+       </form>
 
-					</div>
+       <iframe name="hidden" id="hidden" style="display:none;"></iframe>
 
-				</section>
+      </section>
 
-				<section id="ContactSection">
-					<h2>Contact</h2>
-					<hr />
-					<p>
-						If you would like to contact me please fill out the following form below.
-					</p>
+    </div>
 
-					<form method="post" action="https://script.google.com/macros/s/AKfycbzBqhngdRP_PUemrqYUK6ufJ8owKaP7nZhOUkp7OmbrBJ67R6ns/exec" target="hidden" onsubmit="if(true){}">
+    <footer>
 
-							<input type="text" id="name" name="name" placeholder="Enter Your Name Here" />
-							<input type="email" id="email" name="email" placeholder="Enter Your Email Here" />
-							<textarea id="message" name="message" placeholder="Enter Your Message Here"></textarea>
-							<input id="submit" value="Submit" type="submit" />
+      <div class="footerContainer">
 
-					</form>
+        <p>&copy; Copyright Candace Petty Designs 2017</p>
 
-					<iframe name="hidden" id="hidden" style="display:none;"></iframe>
+        <p>
+          Connect with me on Linked <a target="_blank" href="https://www.linkedin.com/in/candace-petty-ba304369">
+          <i class="fa-2x fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </p>
 
-					<br/>
+      </div>
 
-					<p>
-						Thank you for taking time to look at my web portfolio.
-					</p>
+    </footer>
 
-					<br />
+    <script src="vendor/jQuery/JQuery.js"></script>
+    <script src="vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="vendor/d3/d3.min.js"></script>
+    <script src="js/app.js"></script>
 
-				</section>
-
-			</div>
-
-		</div>
-
-		<footer>
-
-			&copy; Copyright Candace Petty Designs ~ 2016 ~
-
-		</footer>
-
-		<script src="js/jquery-3.0.0.min.js"></script>
-		<script src="js/app.js"></script>
-		<script src="https://use.fontawesome.com/df4740dfa3.js"></script>
-		<script src="js/sweetalert.min.js"></script>
-
-	</body>
+  </body>
 
 </html>
