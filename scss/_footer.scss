@@ -1,0 +1,44 @@
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: teal;
+  font-family: "Roboto", sans-serif;
+
+  .footerContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    p {
+      color: aliceblue;
+      font-size: 1em;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+
+      a {
+        @include Link;
+        color: white;
+
+        &:hover {
+          background-color: $LinkHoverBackgroundColor;
+          @include Prefix(border-radius, 1em, ms moz webkit o);
+          @include Prefix(transition, all 1s, moz webkit o);
+          color: $LinkHoverColor;
+          border: 1px double $LinkHoverBorderColor;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  footer {
+    .footerContainer {
+      p {
+          font-size: .85em;
+      }
+    }
+  }
+}

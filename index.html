@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<!--
+Author: Candace Petty
+Date: 7/5/17
+File: index.html
+-->
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CP Designs</title>
+
+    <!-- Link to Stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="vendor/sweetalert/sweetalert.css" rel="stylesheet">
+    <link rel="stylesheet" href="scss/styles.css"/>
+
+  </head>
+
+  <body>
+
+    <div class="wrapper">
+
+      <header>
+
+        <div class="header-content">
+
+          <a href="#Home">
+
+            <!-- Logo -->
+            <h1>
+              C<span>a</span>n<span>d</span>a<span>c</span>e
+
+              <span>P</span>e<span>t</span>t<span>y</span>
+
+              D<span>e</span>s<span>i</span>g<span>n</span>s
+           </h1>
+
+         </a>
+
+          <nav>
+            <a href="#Home"><i class="fa fa-home"></i> Home </a>
+            <a href="#About"><i class="fa fa-info-circle"></i> About </a>
+            <a href="#Work"><i class="fa fa-file-text"></i> Work </a>
+            <a href="#Contact"><i class="fa fa-phone"></i> Contact</a>
+          </nav>
+
+        </div>
+
+      </header>
+
+      <!-- Home Section -->
+      <section id="Home" class="HomeSection">
+
+        <h2>Hello, my name is Candace Petty.</h2>
+
+      </section>
+
+      <!-- About Section -->
+      <section id="About" class="AboutSection">
+
+        <h2>About</h2>
+
+        <div class="AboutContainer">
+
+            <div class="about-content">
+
+              <div class="avatar"></div>
+
+              <div class="pie-container">
+                <h3>Top Skills</h3>
+                <div class="pie-chart"></div>
+              </div>
+
+             </div>
+
+              <div class="bio">
+
+                <p>
+                    I graduated from the IU School of Informatics and Computing at IUPUI with a Bachelor of Science in Informatics specializing in web design and development along with a certfication in Human-Computer Interaction and E-Commerce Web Development. I am currently looking for a full time web development position. Aspiring to be a professional web designer, I utilize photos from my photography as stock photos for majority of my website designs.
+                    I enjoy taking pictures and being creative with my websites and art in general. My three passions in life are technology, art, and science I enjoy all three equaly. I am also a profound writer
+                    and combined with my photography as well as my HCI background I can build the ultimate web site design to fit the uniqueness of your company.
+                </p>
+
+                <p class="thought">
+                    "I believe great design creates a better user experience."
+                </p>
+
+            </div>
+
+        </div>
+
+      </section>
+
+      <!-- Work Section -->
+      <section id="Work" class="WorkSection">
+
+        <h2>Work</h2>
+
+        <div class="tiles-container">
+
+          <!-- Tile #1  -->
+          <div class="tile-container">
+            <h3>Smart Fridge App</h3>
+            <a target="_blank" href="https://campetty2016.github.io/FridgeApp/index.html">
+              <div id="t1" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              Designed to be used with a smart fridge this app created with JQuery and the Chartist Library shows the user what food is inside their fridge.
+            </div>
+          </div>
+
+          <!-- Tile #2  -->
+          <div class="tile-container">
+            <h3>Monumental Tours</h3>
+            <a target="_blank" href="https://campetty2016.github.io/MonumentalTours/index.html">
+              <div id="t2" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              Created as a one page website, Monumental Tours, uses JQuery and CSS to create the ultimate travel agent.
+            </div>
+          </div>
+
+          <!-- Tile #3  -->
+          <div class="tile-container">
+            <h3>Movie Magic</h3>
+            <a target="_blank" href="https://campetty2016.github.io/MovieMagic/index.html">
+              <div id="t3" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              Designed as a one page movie rental website, Movie Magic, uses JQuery and CSS to display their inventory to users
+            </div>
+          </div>
+
+           <!-- Tile #4  -->
+          <div class="tile-container">
+            <h3>Family Form</h3>
+            <a  target="_blank" href="https://campetty2016.github.io/ErrorCheckForm/index.html">
+              <div id="t4" class="tile"></div>
+            </a>
+            <div class="tile-caption">
+              A sample form that uses validation to assure input is valid and actually adds data inputted to a MongoDB JSON database.
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Contact Section -->
+      <section id="Contact" class="ContactSection">
+
+        <h2>Contact</h2>
+
+        <p>Please fill out the following form below to contact me.</p>
+
+        <form method="post" action="https://script.google.com/macros/s/AKfycbzBqhngdRP_PUemrqYUK6ufJ8owKaP7nZhOUkp7OmbrBJ67R6ns/exec" target="hidden" onsubmit="if(true){}">
+
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <input type="email" id="email" name="email" placeholder="Email" />
+          <textarea id="message" name="message" placeholder="Message"></textarea>
+          <input id="submit" value="Submit" type="submit" />
+
+       </form>
+
+       <iframe name="hidden" id="hidden" style="display:none;"></iframe>
+
+      </section>
+
+    </div>
+
+    <footer>
+
+      <div class="footerContainer">
+
+        <p>&copy; Copyright Candace Petty Designs 2017</p>
+
+        <p>
+          Connect with me on Linked <a target="_blank" href="https://www.linkedin.com/in/candace-petty-ba304369">
+          <i class="fa-2x fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </p>
+
+      </div>
+
+    </footer>
+
+    <script src="vendor/jQuery/JQuery.js"></script>
+    <script src="vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="vendor/d3/d3.min.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+
+</html>

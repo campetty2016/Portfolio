@@ -1,0 +1,410 @@
+section {
+  @include Dimensions($h: $sectionh);
+  @include Font;
+  background-color: $PrimarySectionBackgroundColor;
+  border-bottom: 1px double $SectionBottomBorderColor;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &:nth-child(even) {
+    background-color: $SecondarySectionBackgroundColor;
+  }
+
+  h2 {
+    @include Padding($t: (($sectionh + $navh) - $sectionh) + 10px);
+    text-align: center;
+  }
+
+  p {
+    @include Padding;
+    word-wrap: break-word;
+    color: $ParagraphColor;
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+}
+/* Specific Sections */
+.HomeSection {
+  @include BackgroundImage("Peacock", cover);
+  display: flex;
+  @keyframes TypeName {
+    from {
+      opacity: 0;
+      width: 0;
+      background-color: rgba(11, 9, 39, .73);
+    }
+  }
+  @keyframes Blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+
+  h2 {
+    color: $TypingFontColor;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px 10px 10px;
+    margin: auto;
+    border-right: 2px double aliceblue;
+    width: 30ch;
+    overflow: hidden;
+    @include Prefix(animation, (TypeName 3s steps(50), Blink 1s infinite), webkit o moz);
+    white-space: nowrap;
+    background-color: rgba(11, 9, 39, .5);
+  }
+}
+
+.AboutSection {
+  .AboutContainer {
+    @include Flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    .about-content {
+      display: flex;
+      flex-direction: column;
+
+      .avatar {
+        @include Dimensions(200px, 250px);
+        @include Prefix(border-radius, 1em, ms moz webkit o);
+        @include Padding;
+        border: 2px double green;
+        margin: 0 10px 10px 10px;
+        @include BackgroundImage("me", cover);
+        background-position: center;
+      }
+
+      .pie-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        @include Padding;
+        .pie-chart {
+          @include Padding;
+        }
+      }
+    }
+
+    .bio {
+      p {
+        width: 90%;
+
+      }
+      .thought {
+        font-size: 1.5rem;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+.WorkSection {
+  height: auto;
+  max-height: 1400px;
+
+  .tiles-container {
+    @include Padding;
+    display: flex;
+    width: 95%;
+    flex-wrap: wrap;
+    margin: auto;
+
+    h3 {
+      margin: auto auto 5px;
+    }
+
+    .tile-container {
+      flex-direction: column;
+      @include Flex;
+      width: 50%;
+
+      a {
+        width: 100%;
+
+        .tile {
+          width: 96%;
+          height: 350px;
+          align-items: center;
+          margin: 0 25px 15px 0;
+          justify-content: space-between;
+          border: 1px inset $TileBorderColor;
+          @include Flex;
+          overflow: hidden;
+
+          &:active,
+          &:focus,
+          &:hover {
+            background-color: aliceblue;
+            border: 1px outset $TileBorderHoverColor;
+            outline: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .tile-caption {
+        height: auto;
+        max-height: 200px;
+        overflow: auto;
+        background-color: transparent;
+        width: 98%;
+        justify-content: flex-end;
+        font-size: 80%;
+        transition: all 1s ease;
+        margin: 20px 0 20px 0;
+      }
+
+      #t1 {
+        @include BackgroundImage("HUNGRY", cover);
+      }
+
+      #t2 {
+        @include BackgroundImage("MonumentalTours", cover);
+        background-position: center;
+      }
+
+      #t3 {
+        @include BackgroundImage("MovieMagic", cover);
+      }
+
+      #t4 {
+        @include BackgroundImage("FamilyForm", cover);
+        background-position: center;
+      }
+    }
+  }
+}
+
+.ContactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  p {
+    @include Padding;
+    word-wrap: break-word;
+    color: $ParagraphColor;
+    font-style: italic;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+
+  form {
+    @include Padding;
+
+    input,
+    textarea {
+      display: block;
+      @include Padding;
+      border: 1px outset aliceblue;
+      margin: 0 0 25px 0;
+      display: block;
+      width: 600px;
+      border-radius: 0.25em;
+      resize: vertical;
+      max-height: 280px;
+      max-width: 400px;
+      transition: 1s all ease;
+
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: aliceblue;
+        border: 1px outset teal;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 180px;
+    }
+
+    #submit {
+      width: 200px;
+      background-color: teal;
+      color: aliceblue;
+      border: 1px outset aliceblue;
+      transition: all 1s ease;
+      cursor: pointer;
+
+      &:active,
+      &:hover {
+        background-color: aliceblue;
+        color: teal;
+        font-weight: 600;
+        border: 1px outset teal;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 580px) {
+
+  .AboutSection {
+    .AboutContainer {
+      .about-content {
+        align-self: center;
+      }
+
+      .bio {
+        p {
+          font-size: 2vw;
+          line-height: 1.5;
+        }
+        .thought {
+          margin-top: 0px;
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 450px) {
+  .HomeSection {
+    h2 {
+      font-size: 85%;
+    }
+  }
+
+  .AboutSection {
+    .AboutContainer {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: flex-start;
+      @include Padding;
+
+      .about-content {
+        flex-direction: row;
+
+        .avatar {
+          width: 100px;
+          height: 100px;
+          @include Prefix(border-radius, 100%, ms moz webkit o);
+          @include Padding;
+          border: 2px double green;
+          align-self: center;
+          margin: 0 0 0 10px;
+        }
+
+        .pie-container {
+          h3 {
+            font-size: 1em;
+          }
+        }
+      }
+
+      .bio {
+        p {
+          padding-bottom: 10px;
+          padding-top: 10px;
+          word-wrap: break-word;
+          padding-top: 15px;
+          color: $ParagraphColor;
+          font-style: italic;
+          font-size: 2.5vw;
+          margin: auto;
+          width: 90%;
+          line-height: 1.5;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  .WorkSection {
+    max-height: none;
+
+    .tiles-container {
+      .tile-container {
+        width: 100%;
+        border-bottom: 1px outset #4CAF50;
+        padding-bottom: 10px;
+        margin: 0 0 20px 0;
+
+        .tile {
+          margin: 0 25px 0 0;
+          height: 200px;
+          width: 98%;
+
+          #t1 {
+            background-position: initial;
+          }
+
+          #t2 {
+            @include BackgroundImage("MonumentalTours", cover);
+            background-position: center;
+          }
+
+          #t3 {
+            @include BackgroundImage("MovieMagic", cover);
+            background-position: center;
+          }
+
+          #t4 {
+            @include BackgroundImage("FamilyForm", cover);
+            background-position: center;
+          }
+        }
+
+        &:last-child {
+          border: none;
+        }
+
+        .tile-caption {
+          margin-bottom: 0;
+        }
+        }
+      }
+    }
+
+  .ContactSection {
+    p {
+      font-size: 53%;
+    }
+
+    form {
+      input,
+      textarea {
+        width: 250px;
+      }
+
+      #submit {
+        width: 200px;
+        background-color: teal;
+        color: aliceblue;
+        border: 1px outset aliceblue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  .AboutSection {
+    .AboutContainer {
+      .about-content {
+        align-self: center;
+
+        .avatar {
+          margin-bottom: 0;
+        }
+        .pie-container {
+          display: none;
+        }
+      }
+    }
+  }
+}

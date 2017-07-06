@@ -1,0 +1,42 @@
+@mixin Dimensions($w: $width, $h: $height) {
+  width: $w;
+  height: $h;
+}
+
+@mixin Border-Radius($r: $radius) {
+  -webkit-border-radius: $r;
+  -moz-border-radius: $r;
+  -ms-border-radius: $r;
+  border-radius: $r;
+}
+
+@mixin Font($f: $family, $s: $size, $c: $color, $w: $weight) {
+  font-family: $f;
+  font-size: $s;
+  color: $c;
+  font-weight: $w;
+}
+
+@mixin Flex() {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+@mixin Padding($t: $top, $l: $left, $b: $bottom, $r: $right) {
+  padding-left: $l;
+  padding-right: $r;
+  padding-bottom: $b;
+  padding-top: $t;
+}
+
+@mixin Link() {
+  text-decoration: none;
+}
+
+@mixin Line($bc: $bcolor, $bw: $bwidth, $bs: $bstyle) {
+  width: $bw;
+
+}

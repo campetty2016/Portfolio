@@ -1,0 +1,52 @@
+@mixin Dimensions($w: $width, $h: $height) {
+  width: $w;
+  height: $h;
+}
+
+@mixin Prefix($property, $value, $prefixes: () ) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin Font($f: $family, $s: $size, $c: $color, $w: $weight) {
+  font-family: $f;
+  font-size: $s;
+  color: $c;
+  font-weight: $w;
+}
+
+@mixin BackgroundImage($image, $size) {
+  background-image: url("../img/#{$image}.jpg");
+  background-size: $size;
+}
+
+// @mixin TextShadow($ShadowColors: ()) {
+//   @each $ShadowColor in $ShadowColors {
+//     text-shadow: 1px 1px 1px #{$ShadowColor};
+//   }
+// }
+
+@mixin Flex() {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+@mixin Padding($t: $top, $l: $left, $b: $bottom, $r: $right) {
+  padding-left: $l;
+  padding-right: $r;
+  padding-bottom: $b;
+  padding-top: $t;
+}
+
+@mixin Link() {
+  text-decoration: none;
+}
+
+@mixin Line($bc: $bcolor, $bw: $bwidth, $bs: $bstyle) {
+  width: $bw;
+}

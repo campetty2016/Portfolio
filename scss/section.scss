@@ -1,0 +1,99 @@
+section {
+  @include Dimensions($h: $sectionh);
+  @include Font;
+  background-color: lightblue;
+  box-sizing: border-box;
+  padding-bottom: 20px;
+  border-bottom: 1px double aliceblue;
+
+  &:nth-child(even) {
+    background-color: transparent;
+  }
+
+  h2 {
+    @include Padding($t: (($sectionh + $navh) - $sectionh) + 10px);
+  }
+
+  &:last-child {
+    height: 1000px;
+  }
+
+  p {
+      @include Padding;
+      word-wrap: break-word;
+      padding-top: 15px;
+      color: purple;
+      font-style: italic;
+      font-size: 1.4vw;
+      line-height: 2em;
+      letter-spacing: 1px;
+  }
+}
+
+/* Specific Sections */
+
+.HomeSection {
+  background-image: url("../img/Peacock.jpg");
+  background-size: cover;
+  display: flex;
+
+  @keyframes TypeName {
+    from {opacity: 0; width: 0; background-color: #000;}
+  }
+
+  @keyframes Blink {
+    50% {border-color: transparent;}
+  }
+
+  h2 {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 0px;
+    margin: auto;
+    border-right: 2px double aliceblue;
+    width: 30ch;
+    overflow:hidden;
+    animation: TypeName 3s steps(50), Blink 1s infinite;
+    white-space: nowrap;
+    // background-color: rgba(11, 9, 39, 0.73);
+    padding: 10px;
+  }
+}
+
+.AboutSection {
+
+  .AboutContainer {
+
+    @include Flex;
+    flex-direction: row;
+
+    .avatar {
+      @include Dimensions(200px, 250px);
+      @include Border-Radius;
+      @include Padding;
+      border: 2px double green;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .HomeSection {
+    h2 {
+          font-size: 85%;
+    }
+  }
+
+  .AboutSection {
+
+    .AboutContainer {
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      align-items: flex-start;
+      padding: 10px;
+    }
+  }
+}

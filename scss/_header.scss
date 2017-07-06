@@ -1,0 +1,82 @@
+header {
+  @include Dimensions(100%, $h: $navh);
+  // background-color: #0d8618;
+  background-color: $headerBackground;
+  position: fixed;
+  border-bottom: 1px double $headerBorder;
+  z-index: 9999;
+
+  .header-content {
+    @include Flex;
+
+    h1{
+      @include Font($f: $hfamily, $s: 2em, $c: $headingMainColor);
+      text-shadow:
+      1px 1px 1px $headingTextShadowColor1, 1px 1px 1px $headingTextShadowColor1,
+      1px 1px 1px $headingTextShadowColor2, 1px 1px 1px $headingTextShadowColor2, 1px 1px 1px $headingTextShadowColor2,
+      1px 1px 1px $headingTextShadowColor3, 1px 1px 1px $headingTextShadowColor2;
+      // color: #27d46e;
+      letter-spacing: 1px;
+      @include Padding($l: 0px);
+
+      span {
+        /* color: rgba(113, 208, 255, 0.96); */
+        color: $headingSecondaryColor
+      }
+    }
+
+    hr {
+      width: 98%;
+      margin-bottom: 15px;
+      border: 1px double $HorizontalLineColor;
+    }
+
+    nav {
+      margin-top: 5px;
+
+      a {
+        @include Font($c: $LinkColor);
+        @include Padding($r: 8px);
+        @include Link;
+        border: 1px double transparent;
+
+        &:hover, &:active {
+          background-color: $LinkHoverBackgroundColor;
+          @include Prefix(border-radius, 1em, ms moz webkit o);
+          @include Prefix(transition, all 1s, moz webkit o);
+          color: $LinkHoverColor;
+          border: 1px double $LinkHoverBorderColor;
+        }
+      }
+
+      .Active {
+        @extend a:hover;
+        @extend a:active;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    .header-content {
+      nav{
+        a {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  header {
+    .header-content {
+      nav{
+        a {
+          font-size: .92em;
+        }
+      }
+    }
+  }
+}

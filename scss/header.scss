@@ -1,0 +1,74 @@
+header {
+  @include Dimensions(100%, $h: $navh);
+  // background-color: #0d8618;
+  background-color: rgba(45, 153, 113, 0.93);
+  position: fixed;
+  border-bottom: 1px double aliceblue;
+
+  .header-content {
+    @include Flex;
+
+    h1{
+      @include Font($f: $hfamily, $s: 2em);
+      @include Padding($l: 0px);
+      text-shadow: 1px 1px 1px forestgreen, 1px 1px 1px forestgreen, 1px 1px 1px black, 1px 1px 1px black, 1px 1px 1px black, 1px 1px 1px white, 1px 1px 1px black;
+      // color: #27d46e;
+      color: rgb(224, 180, 225);
+      letter-spacing: 1px;
+
+      span {
+        /* color: rgba(113, 208, 255, 0.96); */
+        color: rgb(167, 250, 209)
+      }
+    }
+
+    hr {
+      width: 98%;
+      margin-bottom: 15px;
+      border: 1px double #39b93f;
+    }
+
+    nav {
+      margin-top: 5px;
+
+      a {
+        @include Font($c: aliceblue);
+        @include Padding($r: 8px);
+        @include Link;
+        border: 1px double transparent;
+
+        &:hover, &:active {
+          background-color: rgba(20, 179, 224, 0.9);
+          @include Border-Radius;
+          transition: all 1s;
+          color: #083358;
+          border: 1px double #229422;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    .header-content {
+      nav{
+        a {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  header {
+    .header-content {
+      nav{
+        a {
+          font-size: .92em;
+        }
+      }
+    }
+  }
+}
