@@ -610,17 +610,17 @@ section {
         margin: 20px 0;
         line-height: 1.5; }
       .WorkSection .tiles-container .tile-container #t1 {
-        background-image: url("../img/HUNGRY.jpg");
+        background-image: url("../img/HUNGRY.JPG");
         background-size: cover; }
       .WorkSection .tiles-container .tile-container #t2 {
-        background-image: url("../img/MonumentalTours.jpg");
+        background-image: url("../img/MonumentalTours.JPG");
         background-size: cover;
         background-position: center; }
       .WorkSection .tiles-container .tile-container #t3 {
-        background-image: url("../img/MovieMagic.jpg");
+        background-image: url("../img/MovieMagic.JPG");
         background-size: cover; }
       .WorkSection .tiles-container .tile-container #t4 {
-        background-image: url("../img/FamilyForm.jpg");
+        background-image: url("../img/FamilyForm.JPG");
         background-size: cover; }
 
 .ContactSection {
