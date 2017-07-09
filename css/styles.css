@@ -687,6 +687,11 @@ section {
 
   .WorkSection .tiles-container .tile-container {
     width: 100%; } }
+
+@media screen and (max-height: 768px) {
+  .WorkSection .tiles-container .tile-container .tile-caption {
+    font-size: 0.75em; } }
+
 @media screen and (max-width: 450px) {
   .HomeSection h2 {
     font-size: 90%; }
