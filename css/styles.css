@@ -688,7 +688,7 @@ section {
   .WorkSection .tiles-container .tile-container {
     width: 100%; } }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-height: 768px) and (max-width: 1024px) {
   .WorkSection .tiles-container .tile-container .tile-caption {
     font-size: 0.75em; } }
 
