@@ -482,6 +482,7 @@ section {
 .HomeSection {
   background-image: url("../img/Peacock.jpg");
   background-size: cover;
+  background-attachment: fixed; 
   display: flex; }
 @keyframes TypeName {
   from {
